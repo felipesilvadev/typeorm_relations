@@ -43,7 +43,7 @@ class CreateProductService {
       const findProduct = findAllProducts.find(({ id }) => id === product.id);
 
       if (!findProduct) {
-        throw new AppError('One or more products was not found', 404);
+        throw new AppError('One or more products was not found');
       }
 
       if (product.quantity > findProduct.quantity) {
